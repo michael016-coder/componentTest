@@ -224,28 +224,6 @@
         }
 
 
-        footer {
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100vw;
-            text-align: center;
-            font-size: 13px;
-            color: #888ca7;
-            padding: 10px 0 8px 0;
-            background: transparent;
-            z-index: 1500;
-            pointer-events: none;
-            user-select: none;
-        }
-
-        footer small a {
-            color: #aaa;
-            text-decoration: underline;
-            pointer-events: auto;
-            user-select: auto;
-        }
 
         @media (max-width: 480px) {
             footer {
@@ -287,55 +265,15 @@
 
             <li>재료</li>
         </ul>
-        <!-- 
-                앞선 unsigned list 안에 있는 <li>는 그냥 보여주기용으로 만든 것이고, 실제로는
-                    const ingredients = [
-                    { name: "계란", quantity: 5, day: 10 },
-                    { name: "우유", quantity: 2, day: 5 },
-                    { name: "감자", quantity: 8, day: 7 }
-                  ];
-              
-                  이런식으로 script에 추가할 것.
-                  const listEl = document.querySelector('.ingredient-list');
-                  ingredients.forEach(item => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `
-                      <span class="ingredient-name">${item.name} /</span>
-                      <span>수량 </span><span class="quantity">${item.quantity}</span>
-                      <span> / (+</span><span class="daycounting">${item.day}</span> <span>days)</span>
-                    `;
-                    listEl.appendChild(li);
-                  });
-                  
-
-                  즉, 현재는 <ul></ul> 만 만들어 놓은것. 배열을 이용한 함수를 만드려고. -->
-
+       
 
     </div>
 
 
 
     </div>
-    <nav class="bottom-nav">
-        <a href="#" class="nav-item" title="나의 냉장고">
-            <img src="icons/RefrigeratorIcon.png" alt="Refrigerator Icon" class="nav-icon">
-        </a>
-        <a href="#" class="nav-item" title="레시피 탐색">
-            <img src="icons/searchIcon.png" alt="Search Icon" class="nav-icon">
-        </a>
-        <a href="#" class="nav-item" title="장바구니">
-            <img src="icons/addCartIcon.png" alt="Add Cart Icon" class="nav-icon">
-        </a>
-        <a href="#" class="nav-item" title="히스토리">
-            <img src="icons/HistoryIcon.png" alt="History Icon" class="nav-icon">
-        </a>
-    </nav>
-    <footer>
-        <small>
-            Icons by <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener">Freepik</a> /
-            Powered by <a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome</a>
-        </small>
-    </footer>
+   
+    
 </body>
 
 </html>
