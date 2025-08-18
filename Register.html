@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReciPick</title>
+     <style>
+          body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+            
+        }
+        .Registertab {
+            background: #fff;
+            border: 0.5px solid #000;
+            border-radius: 12px;
+            width: 350px;
+            min-height: 500px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 24px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 32px;
+            
+        }
+        .Registertab form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+        }
+        .Registertab label {
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+        .Registertab input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .Registertab button {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 0;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 12px;
+            transition: background 0.2s;
+        }
+        .Registertab button:hover {
+            background: #1565c0;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="Registertab">
+        <h1>ReciPick</h1>
+        <form>
+            <label for="username">ID를 생성하세요:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">비밀번호를 입력하세요:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="password">비밀번호를 다시 입력하세요:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">가입완료</button>
+
+         </form>
+    </div>
+</body>
+</html>
