@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>검색 결과 예시 리스트 + 체크박스</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Apple SD Gothic Neo', Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+    .search-results {
+      max-width: 420px;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      background: none;
+    }
+    .result-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid #ddd;
+      font-size: 1.1em;
+      color: #23272e;
+      background: none;
+      transition: background 0.14s;
+    }
+    .result-item:last-child {
+      border-bottom: none;
+    }
+    .result-item:hover {
+      background: #f3f6fa;
+    }
+    .checkbox-area {
+      display: flex;
+      align-items: center;
+    }
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: #278cf7;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-results">
+    <div class="result-item">
+      예시 1
+      <span class="checkbox-area"><input type="checkbox"></span>
+    </div>
+    <div class="result-item">
+      예시 2
+      <span class="checkbox-area"><input type="checkbox"></span>
+    </div>
+    <div class="result-item">
+      예시 3
+      <span class="checkbox-area"><input type="checkbox"></span>
+    </div>
+    <div class="result-item">
+      예시 4
+      <span class="checkbox-area"><input type="checkbox"></span>
+    </div>
+    <div class="result-item">
+      예시 5
+      <span class="checkbox-area"><input type="checkbox"></span>
+    </div>
+    <div class="result-item">
+      예시 6
+      <span class="checkbox-area"><input type="checkbox"></span>
+    </div>
+    <div class="result-item">
+      예시 7
+      <span class="checkbox-area"><input type="checkbox"></span>
+    </div>
+    <div class="result-item">
+      예시 8
+      <span class="checkbox-area"><input type="checkbox"></span>
+    </div>
+  </div>
+</body>
+</html>
