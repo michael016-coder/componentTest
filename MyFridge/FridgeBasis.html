@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>메인 바탕</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -222,39 +222,9 @@
                 height: 38px;
             } */
         }
-
-
-        footer {
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100vw;
-            text-align: center;
-            font-size: 13px;
-            color: #888ca7;
-            padding: 10px 0 8px 0;
-            background: transparent;
-            z-index: 1500;
-            pointer-events: none;
-            user-select: none;
-        }
-
-        footer small a {
-            color: #aaa;
-            text-decoration: underline;
-            pointer-events: auto;
-            user-select: auto;
-        }
-
-        @media (max-width: 480px) {
-            footer {
-                font-size: 12px;
-                padding: 11px 0 8px 0;
-            }
-        }
     </style>
-</head>
+
+    </head>
 
 <body>
     <button id="profile-button" class="circle-btn" style="position: fixed; top: 16px; right: 16px; ">
@@ -270,46 +240,10 @@
         </div>
 
         <ul class="ingredient-list">
-            <li>&nbsp;&nbsp;<span class="ingredient-name">재료명 /</span>
-                &nbsp;&nbsp;
-                <span>수량</span>&nbsp;<span class="quantity">n</span>
-                &nbsp;&nbsp;<span>/ (+</span>
-                <span class="daycounting">n</span>
-                &nbsp;<span>days)</span>
-            </li>
-            <li>재료</li>
-            <li>재료</li>
-            <li>재료</li>
-            <li>재료</li>
-            <li>재료</li>
-            <li>재료</li>
-            <li>재료</li>
+           <li class = "ingredient">
 
-            <li>재료</li>
+            </li>   
         </ul>
-        <!-- 
-                앞선 unsigned list 안에 있는 <li>는 그냥 보여주기용으로 만든 것이고, 실제로는
-                    const ingredients = [
-                    { name: "계란", quantity: 5, day: 10 },
-                    { name: "우유", quantity: 2, day: 5 },
-                    { name: "감자", quantity: 8, day: 7 }
-                  ];
-              
-                  이런식으로 script에 추가할 것.
-                  const listEl = document.querySelector('.ingredient-list');
-                  ingredients.forEach(item => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `
-                      <span class="ingredient-name">${item.name} /</span>
-                      <span>수량 </span><span class="quantity">${item.quantity}</span>
-                      <span> / (+</span><span class="daycounting">${item.day}</span> <span>days)</span>
-                    `;
-                    listEl.appendChild(li);
-                  });
-                  
-
-                  즉, 현재는 <ul></ul> 만 만들어 놓은것. 배열을 이용한 함수를 만드려고. -->
-
 
     </div>
 
@@ -330,12 +264,7 @@
             <img src="icons/HistoryIcon.png" alt="History Icon" class="nav-icon">
         </a>
     </nav>
-    <footer>
-        <small>
-            Icons by <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener">Freepik</a> /
-            Powered by <a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome</a>
-        </small>
-    </footer>
+  
 </body>
 
 </html>

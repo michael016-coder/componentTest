@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>수량 조절 + 삭제 버튼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .quantity-controller {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      padding: 6px 10px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      font-family: 'Pretendard', 'sans-serif', Arial;
+      width: fit-content;
+    }
+    .delete-btn {
+      background: #f4f4f6;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      color: #555;
+      padding: 6px 16px;
+      cursor: pointer;
+      transition: background 0.18s;
+    }
+    .delete-btn:hover {
+      background: #e0e2e7;
+    }
+    .qty-btn {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #e2e4eb;
+      background: #fff;
+      color: #aaa;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      line-height: 30px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      outline: none;
+      user-select: none;
+    }
+    .qty-btn:active {
+      background: #f5f5f7;
+      color: #888;
+    }
+    .qty-value {
+      margin: 0 8px;
+      font-size: 1.15rem;
+      width: 18px;
+      display: inline-block;
+      text-align: center;
+      color: #444;
+    }
+  </style>
+</head>
+<body >
+  <div class="quantity-controller" >
+   
+    <button class="qty-btn" id="qty-decrease">−</button>
+    <span class="qty-value" id="qty-value">1</span>
+    <button class="qty-btn" id="qty-increase">+</button>
+    <button class="delete-btn">삭제</button>
+
+  </div>
+
+  <script>
+    const valueSpan = document.getElementById('qty-value');
+    const decreaseBtn = document.getElementById('qty-decrease');
+    const increaseBtn = document.getElementById('qty-increase');
+    let qty = 1;
+
+    decreaseBtn.onclick = function () {
+        // qty는 quantity 수량
+      if (qty > 0) {
+        qty--;
+        valueSpan.textContent = qty;
+      }
+    };
+    increaseBtn.onclick = function () {
+      qty++;
+      valueSpan.textContent = qty;
+    };
+  </script>
+</body>
+</html>

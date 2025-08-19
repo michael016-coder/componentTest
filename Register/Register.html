@@ -12,9 +12,8 @@
             height: 100vh;
             margin: 0;
             background-color: white;
-            
         }
-        .Registertab {
+        .register-tab {
             background: #fff;
             border: 0.5px solid #000;
             border-radius: 12px;
@@ -31,25 +30,24 @@
             text-align: center;
             font-size: 40px;
             margin-bottom: 32px;
-            
         }
-        .Registertab form {
+        .register-tab form {
             display: flex;
             flex-direction: column;
             gap: 8px;
             width: 100%;
         }
-        .Registertab label {
+        .register-tab label {
             margin-bottom: 4px;
             font-weight: bold;
         }
-        .Registertab input {
+        .register-tab input {
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 16px;
         }
-        .Registertab button {
+        .register-tab button {
             background: #1976d2;
             color: #fff;
             border: none;
@@ -62,27 +60,23 @@
             margin-top: 12px;
             transition: background 0.2s;
         }
-        .Registertab button:hover {
+        .register-tab button:hover {
             background: #1565c0;
         }
-
     </style>
 </head>
 <body>
-    
-    <div class="Registertab">
+    <div class="register-tab">
         <h1>ReciPick</h1>
         <form>
-            <label for="username">ID를 생성하세요:</label>
-            <input type="text" id="username" name="username" required>
+            <label for="user-name">ID를 생성하세요:</label>
+            <input type="text" id="user-name" name="user-name" required>
             <br>
             <label for="password">비밀번호를 입력하세요:</label>
             <input type="password" id="password" name="password" required>
-            <label for="password">비밀번호를 다시 입력하세요:</label>
-            <input type="password" id="password" name="password" required>
-            
+            <label for="password-confirm">비밀번호를 다시 입력하세요:</label>
+            <input type="password" id="password-confirm" name="password-confirm" required>
             <button type="submit">가입완료</button>
-
          </form>
     </div>
 </body>

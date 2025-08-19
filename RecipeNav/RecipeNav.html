@@ -17,7 +17,7 @@
         }
         .main-box {
             width: clamp(360px, 50vw, 800px);
-            min-height: clamp(300px, 55vh, 650px); /* 세로 길이 늘림 */
+            min-height: clamp(300px, 55vh, 650px);
             padding: clamp(20px, 4vw, 48px);
             background: #fff;
             border-radius: 32px;
@@ -30,9 +30,6 @@
             margin-top: 8vh;
             margin-bottom: 8vh;
         }
-       
- 
-
         @media (max-width: 700px) {
             .main-box {
                 max-width: 98vw;
@@ -46,81 +43,33 @@
 </head>
 <body>
     <div class="main-box">
-        <!-- ContentsBox -->
-        <div class="contentsBox">
-            <!-- SearchedList-SearchedIngredient -->
-        <ul class = "searchedList">
-            <li class="SearchedIngredient">
-                <button class="checkbox" ></button>
-            </li>
-    
-        </ul>
-
-
-        <div class="SearchBar">
-            <input class="SearchTab" type="text" placeholder="재료명">
-            <button class="SearchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <!-- contents-box -->
+        <div class="contents-box">
+            <!-- searched-list-searched-ingredient -->
+            <ul class="searched-list">
+                <li class="searched-ingredient">
+                    <button class="checkbox"></button>
+                </li>
+            </ul>
+            <div class="search-bar">
+                <input class="search-tab" type="text" placeholder="재료명">
+                <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
         </div>
-        </div>
-
-    
     </div>
-
-
-
-        <!-- ContentsBox -->
-    <div class ="contentsBox">
-        <ul class="IngredientList">
-            <!-- IngredientList-IngredientCheckBox & CheckBox -->
-            <li class="IngredientCheckBox">
-                <div class = "Ingredient"></div>
+    <!-- contents-box -->
+    <div class="contents-box">
+        <ul class="ingredient-list">
+            <!-- ingredient-list-ingredient-checkbox & checkbox -->
+            <li class="ingredient-checkbox">
+                <div class="ingredient"></div>
                 <button class="checkbox"></button>
             </li>
-
-
-
-
         </ul>
-        <div class= "MyFridgeLogoImage">     
-             <img src="#" class="MyFridgeLogoImage">
-             <img src="#" class="MyFridgeLogoImage">
-
-
-        </div>  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+        <div class="my-fridge-logo-image">
+            <img src="#" class="my-fridge-logo-image">
+            <img src="#" class="my-fridge-logo-image">
+        </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>

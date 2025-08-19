@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit / Add / Profile Buttons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* circle-btn은 셋이 동동 공유 클래스  */
+        .circle-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #d9d9d7;
+            border: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: #333;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .circle-btn:hover {
+            background: #ffd43b;
+        }
+
+        .fa-plus {
+            transition: transform 0.5s cubic-bezier(.45, 2, .65, .9);
+        }
+
+        .fa-plus:hover {
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 프로필 버튼 -->
+    <button id="profile-button" class="circle-btn profilebutton">
+        <i class="fa-solid fa-user"></i>
+    </button>
+    <!-- Add 버튼 -->
+    <button id="add-button" class="circle-btn">
+        <i class="fa-solid fa-plus"></i>
+    </button>
+    <!-- Edit 버튼 -->
+    <button id="edit-button" class="circle-btn">
+        <i class="fa-solid fa-pen-to-square"></i>
+    </button>
+
+</body>
+
+</html>
