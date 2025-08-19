@@ -17,7 +17,7 @@
         }
         .main-box {
             width: clamp(360px, 50vw, 800px);
-            min-height: clamp(300px, 55vh, 650px);
+            min-height: clamp(300px, 55vh, 650px); /* 세로 길이 늘림 */
             padding: clamp(20px, 4vw, 48px);
             background: #fff;
             border-radius: 32px;
@@ -30,6 +30,9 @@
             margin-top: 8vh;
             margin-bottom: 8vh;
         }
+       
+ 
+
         @media (max-width: 700px) {
             .main-box {
                 max-width: 98vw;
@@ -44,32 +47,38 @@
 <body>
     <div class="main-box">
 
-        <!-- contents-box -->
-        <div class="contents-box">
-            <ul class="cart-ingredient-list">
-                <li class="cart-ingredient">
-                    <button class="delete-button"><i class="fas fa-trash"></i></button>
-                    <button class="ingredient-category-button"></button>
+
+        <!-- ContentsBox -->
+        <div class="contentsBox">
+            <ul class="CartIngredientList">
+                <li class="CartIngredient">
+                    <button class="DeleteButton"><i class="fas fa-trash"></i></button>
+                    <button class="IngredientCategoryButton"></button>
                     <!-- 아이콘을 두개를 써야하는데(냉장고랑 돋보기) 이걸 버튼 하나로 둘지 두개로 될지 몰겠슈 -->
-                </li>
+                </li>                
             </ul>
 
-            <div class="cart-buttons">
-                <button class="clear-button">초기화</button>
-                <button class="search-recipe-button">레시피 탐색</button>
+            <div class ="CartButtons">
+                <button class="ClearButton">초기화</button>
+                <button class="SearchRecipeButton">레시피 탐색</button>
             </div>
-        </div>
 
-        <!-- contents-box -->
-        <div class="contents-box">
-            <ul class="recipe-list">
-                <li class="recipe-info">
-                    <img class="recipe-photo" src="#">
-                    <div class="recipe-name-card"></div>
-                    <div class="needs"></div>
-                </li>
-            </ul>
+
         </div>
+    
+        <!-- ContentsBox -->
+       <div class= "ContentsBox">
+        <ul class="RecipeList">
+            <li class = "RecipeInfo">
+                <img class ="RecipePhoto" src="#">
+                <div class="RecipeNameCard"></div>
+                <div class="Needs"></div>          
+            </li>  <!--이 각각의 리스트를 버튼으로 변환 필요-->
+
+
+        </ul>
+       </div>
+       
 
     </div>
 </body>
