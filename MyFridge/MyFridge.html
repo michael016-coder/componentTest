@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>메인 바탕</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            background: #faf9f8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .main-box {
+            width: clamp(360px, 50vw, 800px);
+            min-height: clamp(300px, 55vh, 650px); /* 세로 길이 늘림 */
+            padding: clamp(20px, 4vw, 48px);
+            background: #fff;
+            border-radius: 32px;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.13), 0 2px 10px rgba(169, 169, 170, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.02em;
+            margin-top: 8vh;
+            margin-bottom: 8vh;
+        }
+        .main-box h2 {
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+        }
+        .main-box p {
+            font-size: 1.15rem;
+            text-align: center;
+        }
+        .bottom-nav {
+            width: clamp(320px, 40vw, 600px); /* 더 작게 */
+            height: clamp(40px, 6vh, 60px);   /* 더 작게 */
+            padding: clamp(8px, 1vw, 20px);  /* 더 작게 */
+            opacity: 0.95;
+            background: linear-gradient(90deg, white 0%, #e0e0e0 100%);
+            box-shadow: 0 12px 48px rgba(118, 119, 119, 0.23), 0 4px 16px rgba(0, 0, 0, 0.11);
+            border-radius: 999px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: box-shadow 0.2s;
+            margin-bottom: 12vh; /* 더 아래로 내림 */
+        }
+        .bottom-nav:hover {
+            box-shadow: 0 18px 64px rgba(160, 161, 161, 0.28), 0 8px 24px rgba(0, 0, 0, 0.14);
+        }
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.22s cubic-bezier(.4, 2.3, .3, .9);
+        }
+        .nav-icon {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            display: inline-block;
+            vertical-align: middle;
+            transition: transform 0.22s cubic-bezier(.4, 2.3, .3, .9);
+            filter: drop-shadow(0 1px 8px rgba(230, 232, 233, 0.14));
+        }
+        .nav-item:hover .nav-icon,
+        .nav-item:focus .nav-icon {
+            transform: scale(1.18) rotate(-8deg);
+            filter: drop-shadow(0 2px 13px rgba(240, 209, 77, 0.29));
+            padding-top: clamp(2px, 0.5vw, 4px);
+        }
+        @media (max-width: 700px) {
+            .main-box {
+                max-width: 98vw;
+                min-height: 260px;
+                padding: 28px 8vw;
+                margin-top: 4vh;
+                margin-bottom: 4vh;
+            }
+            .bottom-nav {
+                width: 90vw;
+                max-width: none;
+                padding: 10px 6vw;
+                margin-bottom: 8vh;
+            }
+            .nav-icon {
+                width: 38px;
+                height: 38px;
+            }
+        }
+        @media (max-width: 480px) {
+            .main-box {
+                min-height: 140px;
+                padding: 18px 2vw;
+                border-radius: 18px;
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+            }
+            .bottom-nav {
+                width: 100vw;
+                padding: 8px 2vw;
+                border-radius: 30px;
+                margin-bottom: 6vh;
+            }
+            .nav-icon {
+                width: 28px;
+                height: 28px;
+            }
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            text-align: center;
+            font-size: 13px;
+            color: #888ca7;
+            padding: 10px 0 8px 0;
+            background: transparent;
+            z-index: 1500;
+            pointer-events: none;
+            user-select: none;
+        }
+        footer small a {
+            color: #aaa;
+            text-decoration: underline;
+            pointer-events: auto;
+            user-select: auto;
+        }
+        @media (max-width: 480px) {
+            footer {
+                font-size: 12px;
+                padding: 11px 0 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+        <h2>메인 콘텐츠 영역</h2>
+        <p>이곳에 원하는 내용을 자유롭게 넣을 수 있습니다.<br>반응형으로 중앙에 정렬된 흰색 카드 박스입니다.</p>
+    </div>
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item" title="나의 냉장고">
+            <img src="icons/RefrigeratorIcon.png" alt="Refrigerator Icon" class="nav-icon">
+        </a>
+        <a href="#" class="nav-item" title="레시피 탐색">
+            <img src="icons/searchIcon.png" alt="Search Icon" class="nav-icon">
+        </a>
+        <a href="#" class="nav-item" title="장바구니">
+            <img src="icons/addCartIcon.png" alt="Add Cart Icon" class="nav-icon">
+        </a>
+        <a href="#" class="nav-item" title="히스토리">
+            <img src="icons/HistoryIcon.png" alt="History Icon" class="nav-icon">
+        </a>
+    </nav>
+    <footer>
+        <small>
+            Icons by <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener">Freepik</a> /
+            Powered by <a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome</a>
+        </small>
+    </footer>
+</body>
+</html>
